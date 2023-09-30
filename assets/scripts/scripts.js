@@ -13,7 +13,12 @@ Telegram.WebApp.MainButton.setParams({
 fetch("http://localhost:8080",{
     method:'GET',
     body:`${Telegram.WebApp.initData}`
+}).then(response=>{
+    return response.json()
+}).then(result=>{
+    console.log(result)
 })
+
 Telegram.WebApp.MainButton.onClick(function () {
     let initDataURLSP = new URLSearchParams(WebApp.initData);
     let hash = initDataURLSP.get('hash');
