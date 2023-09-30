@@ -17,7 +17,7 @@ fetch("http://localhost:8080",{
     body:`${Telegram.WebApp.initData}`
 }).then(response=>{
     console.log(response)
-    return response.text()
+    return response.json()
 }).then(result=>{
     console.log(result)
 })
