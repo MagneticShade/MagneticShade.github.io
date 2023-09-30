@@ -10,6 +10,10 @@ Telegram.WebApp.onEvent('themeChanged', function() {
 Telegram.WebApp.MainButton.setParams({
     text: 'Main Button'
 });
+fetch("http://localhost:8080",{
+    method:'GET',
+    body:`${Telegram.WebApp.initData}`
+})
 Telegram.WebApp.MainButton.onClick(function () {
     let initDataURLSP = new URLSearchParams(WebApp.initData);
     let hash = initDataURLSP.get('hash');
