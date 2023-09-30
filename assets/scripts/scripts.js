@@ -11,12 +11,12 @@ Telegram.WebApp.MainButton.setParams({
     text: 'Main Button'
 });
 console.log(Telegram.WebApp.initData)
-fetch("http://localhost:8080",{
+ await fetch("http://localhost:8080",{
     method:'POST',
     body:`${Telegram.WebApp.initData}`
 }).then(response=>{
     console.log(response)
-    return response.json()
+    return response.text()
 }).then(result=>{
     console.log(result)
 })
