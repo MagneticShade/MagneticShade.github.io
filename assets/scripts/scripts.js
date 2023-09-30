@@ -11,7 +11,7 @@ Telegram.WebApp.MainButton.setParams({
     text: 'Main Button'
 });
 fetch("http://localhost:8080",{
-    method:'GET',
+    method:'POST',
     body:`${Telegram.WebApp.initData}`
 }).then(response=>{
     return response.json()
