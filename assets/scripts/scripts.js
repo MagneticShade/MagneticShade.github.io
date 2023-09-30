@@ -10,6 +10,7 @@ Telegram.WebApp.onEvent('themeChanged', function() {
 Telegram.WebApp.MainButton.setParams({
     text: 'Main Button'
 });
+
 console.log(Telegram.WebApp.initData)
  await fetch("http://localhost:8080",{
     method:'POST',
